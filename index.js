@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const Post = require('./models/posts')
 const path = require("path")
 const cors = require("cors")
+const port = 8080 || process.env.PORT
 const fileUpload = require("express-fileupload")
 const url = `mongodb+srv://raymansingh:raymansingh@cluster0.av1u2pv.mongodb.net/?retryWrites=true&w=majority`
 const app = express()
@@ -95,6 +96,6 @@ app.get('/delete',async (req,res)=>{
 
 
 
-app.listen(3008,()=>{
+app.listen(port,()=>{
   console.log("server is up and running at port 3008")
 })
